@@ -21,7 +21,7 @@ git clone https://github.com/nico817/docker-image-tp.git
 ```
 
 ## Accede a la carpeta del proyecto:
-
+ 
 ```
 cd docker-image-tp
 ```
