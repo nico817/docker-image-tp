@@ -42,7 +42,10 @@ Para ejecutar la imagen Docker que acabas de crear, utiliza el siguiente comando
 docker run -p 80:80 imagen-docker-tp
 ```
 
-Esto ejecutará la imagen y expondrá el puerto 80 del contenedor al puerto 80 de tu máquina local. Ahora podrás acceder a la página HTML a través de tu navegador en `http://localhost:8080 `
+Esto ejecutará la imagen. Ahora podrás acceder a la página HTML a través de tu navegador en `http://localhost:8080 `
+![alt text](image.png)
+
+
 
 # Pasos del despliegue de la imagen en en GitHub 
 
