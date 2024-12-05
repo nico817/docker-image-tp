@@ -1,55 +1,71 @@
-Proyecto Docker: Infraestructura en la Nube
-Este proyecto contiene una imagen Docker que sirve una página web básica con información sobre la materia Infraestructura en la Nube y tu nombre.
+# Docker Image TP
 
-Instrucciones
-1. Clonar el repositorio
-Primero, clona este repositorio a tu máquina local:
+Este proyecto consiste en la creación de una imagen Docker que despliega un servidor Apache con una página HTML básica.
 
-bash
-Copiar código
-git clone https://github.com/tu-usuario/infraestructura-en-la-nube.git
-cd infraestructura-en-la-nube
-Si prefieres trabajar con ramas, se recomienda usar una rama de desarrollo para evitar conflictos directos en la rama principal. Puedes crear una rama de la siguiente manera:
+# Estructura del Proyecto
+El proyecto contiene los siguientes archivos:
 
-bash
-Copiar código
-git checkout -b nombre-de-tu-rama
-2. Crear la imagen Docker
-Una vez que hayas clonado el repositorio y te encuentres en el directorio del proyecto, asegúrate de que el Dockerfile, entrypoint.sh, y index.html estén presentes.
+- Dockerfile: Contiene las instrucciones para construir la imagen Docker.
+- entrypoint.sh: Script que se ejecuta al inicio del contenedor, asegurándose de que Apache se inicie correctamente.
+- index.html: Página HTML básica que se despliega a través de Apache.
+- README.md: Este archivo con las instrucciones para clonar, construir y ejecutar el proyecto.
 
-Construye la imagen Docker ejecutando el siguiente comando:
+# Pasos a seguir: 
 
-bash
-Copiar código
-docker build -t infraestructura-en-la-nube .
-Este comando le da el nombre infraestructura-en-la-nube a la imagen construida.
+## Clonar el repositorio
 
-3. Desplegar la imagen Docker
-Para desplegar la imagen en un contenedor y acceder a la página, usa el siguiente comando:
+Para comenzar, clona este repositorio usando el siguiente comando:
 
-bash
-Copiar código
-docker run -d -p 8080:80 infraestructura-en-la-nube
--d: Ejecuta el contenedor en segundo plano.
--p 8080:80: Mapea el puerto 80 del contenedor al puerto 8080 de tu máquina local.
-4. Acceder a la página
-Una vez que el contenedor esté en ejecución, abre tu navegador y accede a la siguiente dirección:
+```
+git clone https://github.com/nico817/docker-image-tp.git
+```
 
-arduino
-Copiar código
-http://localhost:8080
-Verás una página web con el nombre de la materia Infraestructura en la Nube y tu nombre, Marcelo Nicolás Nuñez.
+## Accede a la carpeta del proyecto:
 
-5. Uso de Ramas en Git
-Para mantener el proyecto organizado y facilitar las contribuciones, te recomendamos trabajar en ramas de desarrollo. Para crear y cambiar a una nueva rama, usa:
+```
+cd docker-image-tp
+```
 
-bash
-Copiar código
-git checkout -b nueva-rama
-Cuando termines de hacer tus cambios, puedes hacer commit y push a esa rama:
+## Crear la imagen Docker
+Una vez dentro de la carpeta del proyecto, crea la imagen Docker utilizando el siguiente comando:
 
-bash
-Copiar código
+```
+docker build -t imagen-docker-tp .
+```
+
+Este comando construye la imagen a partir del Dockerfile presente en el repositorio. El proceso puede tardar unos minutos dependiendo de la velocidad de tu conexión y tu máquina.
+
+## Ejecutar la imagen Docker
+Para ejecutar la imagen Docker que acabas de crear, utiliza el siguiente comando:
+
+```
+docker run -p 80:80 imagen-docker-tp
+```
+
+Esto ejecutará la imagen y expondrá el puerto 80 del contenedor al puerto 80 de tu máquina local. Ahora podrás acceder a la página HTML a través de tu navegador en `http://localhost:8080 `
+
+# Pasos del despliegue de la imagen en en GitHub 
+
+
+```
 git add .
-git commit -m "Descripción de los cambios"
-git push origin nueva-rama
+
+git commit -m "Cambio del commit"
+```
+Para este ejemplo se creo la rama `rama-docker` para hacer el push con los cambios a esa rama y luego se realizó un Pull Request desde Github para fusionar los cambios con la rama `main`
+
+```
+git checkout -b rama-docker
+
+git push origin rama-docker
+
+```
+
+
+
+# Estructura del Proyecto
+El proyecto contiene los siguientes archivos:
+
+- Dockerfile: Contiene las instrucciones para construir la imagen Docker.
+- index.html: Página HTML básica que se despliega a través de Apache.
+- README.md: Este archivo con las instrucciones para clonar, construir y ejecutar el proyecto.
