@@ -61,11 +61,3 @@ git push origin rama-docker
 
 ```
 
-
-
-# Estructura del Proyecto
-El proyecto contiene los siguientes archivos:
-
-- Dockerfile: Contiene las instrucciones para construir la imagen Docker.
-- index.html: Página HTML básica que se despliega a través de Apache.
-- README.md: Este archivo con las instrucciones para clonar, construir y ejecutar el proyecto.
