@@ -37,7 +37,7 @@ Este comando construye la imagen a partir del Dockerfile presente en el reposito
 
 ## Ejecutar la imagen Docker
 Para ejecutar la imagen Docker que acabas de crear, utiliza el siguiente comando:
-
+ 
 ```
 docker run -p 80:80 imagen-docker-tp
 ```
