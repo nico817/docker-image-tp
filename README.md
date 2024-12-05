@@ -37,12 +37,15 @@ Este comando construye la imagen a partir del Dockerfile presente en el reposito
 
 ## Ejecutar la imagen Docker
 Para ejecutar la imagen Docker que acabas de crear, utiliza el siguiente comando:
-
+ 
 ```
 docker run -p 80:80 imagen-docker-tp
 ```
 
-Esto ejecutará la imagen y expondrá el puerto 80 del contenedor al puerto 80 de tu máquina local. Ahora podrás acceder a la página HTML a través de tu navegador en `http://localhost:8080 `
+Esto ejecutará la imagen. Ahora podrás acceder a la página HTML a través de tu navegador en `http://localhost:8080 `
+![alt text](image.png)
+
+
 
 # Pasos del despliegue de la imagen en en GitHub 
 
@@ -61,11 +64,3 @@ git push origin rama-docker
 
 ```
 
-
-
-# Estructura del Proyecto
-El proyecto contiene los siguientes archivos:
-
-- Dockerfile: Contiene las instrucciones para construir la imagen Docker.
-- index.html: Página HTML básica que se despliega a través de Apache.
-- README.md: Este archivo con las instrucciones para clonar, construir y ejecutar el proyecto.
